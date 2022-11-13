@@ -11,7 +11,8 @@ public class NBulletShot : MonoBehaviour
     void Start()
     {
         StartCoroutine("Shot"); //반복해서 함수 수행
-        pos = this.gameObject.transform.localPosition; //몬스터의 현재 위치
+        pos = gameObject.transform.position;
+        //pos = this.gameObject.transform.localPosition; //몬스터의 현재 위치
     }
 
 
