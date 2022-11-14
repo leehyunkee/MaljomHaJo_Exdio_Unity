@@ -10,28 +10,18 @@ public class ThreeShot : MonoBehaviour {
     void Start()
     {
         StartCoroutine("Shot2"); //반복해서 함수 수행
-        pos = this.gameObject.transform.localPosition; //몬스터의 현재 위치
+        pos = this.gameObject.transform.position; //몬스터의 현재 위치
     }
 
     IEnumerator Shot2()
     {
-        //360번 반복
-        for (int i = -15; i < 15; i += 13)
-        {
-            //총알 생성
-            GameObject temp = Instantiate(bullet);
 
-            //1초마다 삭제
-            Destroy(temp, 1.0f);
+            GameObject temp = Instantiate(bullet,pos, Quaternion.Euler(0, 0, 15f));
+            GameObject temp2 = Instantiate(bullet, pos, Quaternion.Euler(0, 0, 0f));
+            GameObject temp3 = Instantiate(bullet, pos, Quaternion.Euler(0, 0, -15f));
 
-            // 몬스터의 현재 위치에서 총알 복제
-            temp.transform.position = pos;
 
-            //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입
-            temp.transform.rotation = Quaternion.Euler(0, 0, i);
-
-            yield return new WaitForSeconds(0.5f); // 5초 간격으로 복제
+        yield return new WaitForSeconds(0.5f); // 5초 간격으로 복제
             StartCoroutine("Shot2"); //반복해서 함수 수행
-        }
     }
 }
