@@ -11,7 +11,7 @@ public class UpDownMove : MonoBehaviour
     float currentPositionY, currentPositionX; //현재 위치(x) 저장
 
     float direction = 3.0f; //이동속도+방향
-    GameObject g;
+
 
 
 
@@ -20,7 +20,6 @@ public class UpDownMove : MonoBehaviour
     {
         currentPositionX = this.gameObject.transform.localPosition.x;
         currentPositionY = this.gameObject.transform.localPosition.y;
-        g = transform.GetChild(0).gameObject;
 
     }
 
@@ -62,7 +61,6 @@ public class UpDownMove : MonoBehaviour
         //이동속도+방향에 -1을 곱해 반전을 해주고 현재위치를 좌로 이동가능한 (x)최대값으로 설정
 
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
-        g.transform.localPosition = new Vector2(-7f, -1.8f);
         //"Stone"의 위치를 계산된 현재위치로 처리
 
     }

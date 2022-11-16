@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310805073}
   - component: {fileID: 310805072}
+  - component: {fileID: 310805070}
   m_Layer: 0
   m_Name: monster
   m_TagString: Untagged
@@ -140,6 +141,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &310805070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310805069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b17ae2c4ecfd548ad51b6a950dfdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &310805072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -199,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310805069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8, y: 0.2927, z: 0}
+  m_LocalPosition: {x: 4.29, y: 0.54, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 1690410734}
@@ -301,6 +314,7 @@ GameObject:
   - component: {fileID: 1690410736}
   - component: {fileID: 1690410735}
   - component: {fileID: 1690410737}
+  - component: {fileID: 1690410738}
   m_Layer: 0
   m_Name: BulletSpawner
   m_TagString: Untagged
@@ -329,7 +343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690410733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c7e7de36df010945bd71d7be41c4661, type: 3}
   m_Name: 
@@ -342,7 +356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690410733}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7d3a6efb55fb9a43ab6069fe99c8d3f, type: 3}
   m_Name: 
@@ -355,7 +369,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690410733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e2c6a9e9299b94c9946c2caf52b2f5, type: 3}
   m_Name: 
@@ -364,3 +378,40 @@ MonoBehaviour:
   angleInterval: 10
   startAngle: 30
   endAngle: 330
+--- !u!114 &1690410738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690410733}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faafcc8681ec07742b06a7aae6feac6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9867554
+      value: 0.0056533813
+      inSlope: -1.8747207
+      outSlope: -1.8747207
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.081519864
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
