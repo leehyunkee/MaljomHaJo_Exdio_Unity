@@ -30,13 +30,13 @@ public class CircleShot : MonoBehaviour
             {
                 GameObject temp = Instantiate(bullet);
                 temp.transform.position = pos;
-                Vector2 direction = new Vector2(Mathf.Cos(fireAngle * Mathf.Deg2Rad), Mathf.Sin(fireAngle * Mathf.Deg2Rad));
+                Vector2 direction = new Vector2(Mathf.Cos(fireAngle * Mathf.Rad2Deg), Mathf.Sin(fireAngle * Mathf.Rad2Deg)); //임시(완전히 동그랗지 않음)
 
                 temp.transform.right = direction;
                 temp.transform.position = transform.position;
             }
 
-            yield return new WaitForSeconds(1.0f); 
+            yield return new WaitForSeconds(2.0f); 
             StartCoroutine("Shot"); //반복해서 함수 수행
 
         }
