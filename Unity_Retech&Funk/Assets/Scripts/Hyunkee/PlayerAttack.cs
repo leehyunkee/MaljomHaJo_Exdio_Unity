@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
                 foreach (Collider2D collider in collider2Ds)
                 {
                     //지정한 위치의 범위 내에 적이 있는 상태에서 공격 시 충돌처리
-                    Debug.Log(collider.tag);
+                    Debug.Log("에라이 이놈");
                 }
                 curTime = coolTime;
             }
