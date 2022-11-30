@@ -4,9 +4,28 @@ using UnityEngine;
 
 public class BulletDamage : MonoBehaviour
 {
+    
+    public Animator anim;
+    public GameObject obj;
+    
+    
+
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag(NormalBullet)) ;
-
+        if (obj.GetComponent<PlayerHealth>().isHurt == false && collision.tag == ("Player"))
+        {                      
+            obj = GameObject.Find("Player");
+            obj.GetComponent<PlayerHealth>().TakeDamage(1);
+            obj.GetComponent<PlayerHealth>().Hurt();
+            DestroyBullet();
+        }
+        
     }
+    void DestroyBullet()
+    {
+        Destroy(gameObject);
+    }
+
 }

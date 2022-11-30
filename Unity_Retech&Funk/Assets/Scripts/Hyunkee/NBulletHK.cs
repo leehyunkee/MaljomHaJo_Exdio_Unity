@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NBullet : MonoBehaviour
+public class NBulletHK : MonoBehaviour
 {
 
     public GameObject bullet; // 총알 오브젝트
@@ -25,4 +25,5 @@ public class NBullet : MonoBehaviour
         StartCoroutine("Shot"); //반복해서 함수 수행
 
     }
+    
 }

@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (curTime <= 0 && comboCurTime <= 0) 
         {
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetMouseButtonDown(0))
             {
                 //X 키를 누르면 근접공격이 나감
                 ComboCount -= 1;
