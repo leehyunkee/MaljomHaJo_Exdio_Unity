@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject EndImg;
+    public GameObject StopImg;
     bool escapeKey = false;
 
     private void Update()
@@ -13,12 +14,12 @@ public class GameManager : MonoBehaviour
         {
             if(escapeKey == false)
             {
-                EndImg.SetActive(true);
+                StopImg.SetActive(true);
                 escapeKey = true;
             }
             else
             {
-                EndImg.SetActive(false);
+                StopImg.SetActive(false);
                 escapeKey = false;
             }
             
@@ -34,7 +35,12 @@ public class GameManager : MonoBehaviour
 
     public void Continue()
     {
-        EndImg.SetActive(false);
+        StopImg.SetActive(false);
         escapeKey = false;
+    }
+
+    public void Title()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
