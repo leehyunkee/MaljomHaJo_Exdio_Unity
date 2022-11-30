@@ -5,7 +5,6 @@ using UnityEngine;
 public class CurveShot : MonoBehaviour
 {
 
-    // 미완성, 이동패턴 만들고나서 할게요..
 
     public GameObject bullet; // 총알 오브젝트
     Vector2 pos;
