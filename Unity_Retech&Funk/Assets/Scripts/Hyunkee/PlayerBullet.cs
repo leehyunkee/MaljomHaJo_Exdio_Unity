@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    public float speed;
+    public float speed = 10f;
 
     private void Start()
     {

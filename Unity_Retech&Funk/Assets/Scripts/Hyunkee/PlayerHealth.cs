@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    //충돌판정으로 데미지를 받는 스크립트
     public bool isHurt = false;
     public SpriteRenderer sr;
     Color halfA = new Color(1, 1, 1, 0.5f);
@@ -23,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     
 
     public Animator anim;
-    public GameObject obj;
    
 
     private void OnTriggerEnter2D(Collider2D collision)
