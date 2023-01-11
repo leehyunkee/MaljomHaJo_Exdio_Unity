@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public GameObject Playerbullet;
+    public Transform pos;
+
+}
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerAttack : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +34,7 @@ public class PlayerAttack : MonoBehaviour
     public bool isParry = false;
     private void Update()
     {
-        
+
 
 
     }
@@ -78,7 +88,7 @@ public class PlayerAttack : MonoBehaviour
             curTime -= Time.deltaTime;
             comboCurTime -= Time.deltaTime;
         }
-        
+
     }
     private void OnDrawGizmos()
     {
@@ -95,3 +105,5 @@ public class PlayerAttack : MonoBehaviour
         isParry = false;
     }
 }
+
+*/

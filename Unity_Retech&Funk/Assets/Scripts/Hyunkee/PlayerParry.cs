@@ -23,7 +23,7 @@ public class PlayerParry : MonoBehaviour
         if (curtime <= 0)
         {
             //마우스 왼쪽 버튼 누를 때
-            if (Input.GetMouseButtonDown(0) && playerAttack.isParry == true )//코드 내의 변수를 .을 이용해 가져옴
+            if (Input.GetMouseButtonDown(0) && playerAttack.isParry == true)//코드 내의 변수를 .을 이용해 가져옴
             {
                 Instantiate(bullet, parrypos.position, transform.rotation);
                 playerAttack.IsParryFalse();//스크립트 내의 함수 가져오기

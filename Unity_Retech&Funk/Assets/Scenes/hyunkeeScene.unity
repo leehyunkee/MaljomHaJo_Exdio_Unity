@@ -543,7 +543,6 @@ GameObject:
   - component: {fileID: 733786620}
   - component: {fileID: 733786621}
   - component: {fileID: 733786622}
-  - component: {fileID: 733786623}
   m_Layer: 0
   m_Name: ParryPos
   m_TagString: Untagged
@@ -628,26 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b731aa2b4d3aad149b536fcec60cdc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &733786623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733786619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcae056b6c9826c4294bf5a5c44d286d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 2823370690840763308, guid: 9b70511f296c8194db1063ac91b455d7, type: 3}
-  parrypos: {fileID: 733786620}
-  coolTime: 0.5
-  UpdateComboCount: 5
-  comboCoolTime: 2
-  pos: {fileID: 659157539}
-  boxSize: {x: 1, y: 2}
-  isParry: 0
 --- !u!1 &1470901701
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,8 +682,9 @@ GameObject:
   - component: {fileID: 1493363225}
   - component: {fileID: 1493363224}
   - component: {fileID: 1493363223}
-  - component: {fileID: 1493363221}
   - component: {fileID: 1493363226}
+  - component: {fileID: 1493363221}
+  - component: {fileID: 1493363222}
   - component: {fileID: 1493363229}
   - component: {fileID: 1493363228}
   m_Layer: 0
@@ -728,6 +708,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   moveDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &1493363222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493363220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e8b1e1a2fe98548811c16538634550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolTime: 0.5
+  pos: {fileID: 659157539}
+  boxSize: {x: 1.3, y: 2.4}
+  UpdateComboCount: 3
+  comboCoolTime: 2
 --- !u!70 &1493363223
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
