@@ -8,6 +8,8 @@ TagManager:
   - NormalBullet
   - parry
   - sdEnemy
+  - ParryCollide
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

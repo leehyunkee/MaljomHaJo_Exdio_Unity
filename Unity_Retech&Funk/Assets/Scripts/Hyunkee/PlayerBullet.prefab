@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5867784694286014224}
   - component: {fileID: -3429337638301422432}
   m_Layer: 0
-  m_Name: ParryBullet
-  m_TagString: parry
+  m_Name: PlayerBullet
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

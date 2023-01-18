@@ -28,21 +28,21 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isHurt == false && collision.gameObject.tag == ("Enemy"))
+        if (isHurt == false && collision.gameObject.tag == ("Enemy") || isHurt == false && collision.gameObject.tag == ("parry")) 
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
             Destroy(collision.gameObject);
-            Debug.Log("아야");
+            Debug.Log("탄막충돌");
             Hurt();
             
         }
-        else if (isHurt == false && collision.gameObject.tag == ("sdEnemy"))
+        else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("parry"))
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
             
-            Debug.Log("근접아야");
+            Debug.Log("잡몹충돌");
             Hurt();
 
         }
