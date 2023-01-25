@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightLeftMove : MonoBehaviour
+public class DiagonalUpMove : MonoBehaviour
 {
     float currentPositionY, currentPositionX; //현재 위치(x) 저장
 
-    float direction = -6.0f; //이동속도+방향
-
+    float directionX = -6.0f; //이동속도+방향
+    float directionY = 3.0f;
 
 
 
@@ -22,12 +22,9 @@ public class RightLeftMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         currentPositionX += Time.deltaTime * direction;
-            this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
+        currentPositionX += Time.deltaTime * directionX;
+        currentPositionY += Time.deltaTime * directionY;
+        this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
 
-        if (currentPositionX < -10)
-        {
-            Destroy(gameObject);
-        }
     }
 }

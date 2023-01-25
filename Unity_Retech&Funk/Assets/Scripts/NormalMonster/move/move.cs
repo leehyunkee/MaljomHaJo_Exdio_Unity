@@ -25,24 +25,24 @@ public class move : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer < 1)
+        if (timer < 1.2)
         {
             currentPositionX += Time.deltaTime * directionX;
             currentPositionY += Time.deltaTime * directionY;
             this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
         }
-        else if (timer >= 1 || timer < 2)
+        else if (timer >= 1.2 || timer < 2.4)
         {
-            Debug.Log("A");
-            StartCoroutine(WaitForIt());
-        }
-        else if (timer >= 2 || timer <3)
-        {
-            Debug.Log("D");
+
             currentPositionX += -Time.deltaTime * directionX;
-            currentPositionY += -Time.deltaTime * directionY;
+            currentPositionY += Time.deltaTime * directionY;
             this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
         }
+        else
+        {
+            StartCoroutine(WaitForIt());
+        }
+
 
     }
 
