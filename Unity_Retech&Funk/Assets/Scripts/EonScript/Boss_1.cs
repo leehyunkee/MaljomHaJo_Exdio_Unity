@@ -7,6 +7,11 @@ public class Boss_1 : MonoBehaviour
     //public GameObject playerObject;
     public GameObject bulletPrefab;
     GameObject player;
+    //public GameObject mob;
+    float timeCheck;
+    bool goRush = false;
+
+    Vector3 direction;
     void Start()
     {
         StartCoroutine("MakeBullet");
@@ -16,11 +21,22 @@ public class Boss_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
-            rush();
+            
+            direction = player.transform.position - this.transform.position;
+            goRush = true;
         }
         
+        if(goRush)
+        {
+            //Vector3 direction = player.transform.position - this.transform.position;
+            direction.Normalize();
+            this.transform.position = this.transform.position + direction*5  * Time.deltaTime;
+            //mob.transform.position = mob.transform.position + direction * 0.01f * Time.deltaTime;
+            Debug.Log("1");
+            
+        }
     }
 
     IEnumerator MakeBullet()
@@ -30,9 +46,18 @@ public class Boss_1 : MonoBehaviour
         StartCoroutine("MakeBullet");
     }
 
-    void rush()
+    IEnumerator rush()
     {
         Vector3 direction = player.transform.position - this.transform.position;
-        this.transform.position += direction * 0.001f;
+        direction.Normalize();
+        while (this.gameObject.transform.position.x > -30f)
+        {
+            this.transform.position = this.transform.position + direction * 0.01f * Time.deltaTime;
+            //mob.transform.position = mob.transform.position + direction * 0.01f * Time.deltaTime;
+            Debug.Log("1");
+        }
+
+        yield return null;
     }
+   
 }

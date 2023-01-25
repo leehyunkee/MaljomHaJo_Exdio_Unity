@@ -17,7 +17,8 @@ public class Bullet : MonoBehaviour
 
         myPos = transform.position;
 
-        newPos = (targetPos - myPos) * bulletSpeed;
+        newPos = (targetPos - myPos).normalized * bulletSpeed;
+        Timer();
     }
 
     
@@ -30,5 +31,10 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    protected virtual void Timer()
+    {
+
+    }
+        
 
 }
