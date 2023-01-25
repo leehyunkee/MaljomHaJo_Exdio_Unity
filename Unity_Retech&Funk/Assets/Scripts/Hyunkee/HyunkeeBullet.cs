@@ -10,7 +10,7 @@ public class HyunkeeBullet : MonoBehaviour
     private void Start()
     {
         //생성으로부터 2초 후 삭제
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 2f);
     }
 
     private void Update()

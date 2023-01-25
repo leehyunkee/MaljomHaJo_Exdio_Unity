@@ -21,7 +21,7 @@ public class NBulletHK : MonoBehaviour
 
         GameObject temp = Instantiate(bullet); // 총알 복제
         temp.transform.position = pos; // 몬스터의 현재 위치에서 총알 복제
-        yield return new WaitForSeconds(0.3f); // 3초 간격으로 복제
+        yield return new WaitForSeconds(0.5f); // 3초 간격으로 복제
         StartCoroutine("Shot"); //반복해서 함수 수행
 
     }
