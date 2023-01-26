@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UpDownMove : MonoBehaviour
 {
-    float UpMax = 2.0f; //좌로 이동가능한 (x)최대값
+    float UpMax = 3.5f; //좌로 이동가능한 (x)최대값
 
-    float DownMax = -2.0f; //우로 이동가능한 (x)최대값
+    float DownMax = -3.5f; //우로 이동가능한 (x)최대값
 
     float currentPositionY, currentPositionX; //현재 위치(x) 저장
 

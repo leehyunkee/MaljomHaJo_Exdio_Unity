@@ -20,10 +20,10 @@ public class randomspwan : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        createTime = 1;
 
             //몬스터 생성 코루틴 함수 호출
-       StartCoroutine(this.CreateMonster());
+        StartCoroutine(this.CreateMonster());
 
     }
 
