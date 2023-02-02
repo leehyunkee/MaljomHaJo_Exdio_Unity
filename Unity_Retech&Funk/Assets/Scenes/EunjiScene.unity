@@ -134,17 +134,13 @@ GameObject:
   - component: {fileID: 310805073}
   - component: {fileID: 310805072}
   - component: {fileID: 310805070}
-  - component: {fileID: 310805076}
-  - component: {fileID: 310805075}
-  - component: {fileID: 310805074}
-  - component: {fileID: 310805071}
   m_Layer: 0
   m_Name: monster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &310805070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,18 +151,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7b17ae2c4ecfd548ad51b6a950dfdcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &310805071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310805069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03fdfc871c48a44f9272aa407148b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &310805072
@@ -235,42 +219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310805074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310805069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768b048df6b53b34ea9258fdb1e070be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &310805075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310805069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b87dec65f5e05641bfa03c2f3673f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &310805076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310805069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb839f90db433584aab213b73c5aaa75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1399055050
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1434791729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +368,7 @@ GameObject:
   - component: {fileID: 1690410735}
   - component: {fileID: 1690410737}
   - component: {fileID: 1690410738}
+  - component: {fileID: 1690410739}
   m_Layer: 0
   m_Name: BulletSpawner
   m_TagString: Untagged
@@ -461,7 +410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690410733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7d3a6efb55fb9a43ab6069fe99c8d3f, type: 3}
   m_Name: 
@@ -520,60 +469,17 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &2027607803
-PrefabInstance:
+--- !u!114 &1690410739
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1044662800262206034, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_Name
-      value: monster (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265828987331481195, guid: 7808526c469331746b5df8f24b482697, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7808526c469331746b5df8f24b482697, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690410733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdb532a97575d346b7d216bb3367c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet1: {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  bullet2: {fileID: 0}
