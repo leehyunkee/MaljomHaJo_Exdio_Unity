@@ -526,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659157538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.8, y: 0.6, z: -120.3786}
+  m_LocalPosition: {x: 2.17, y: 0.31, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1493363225}
@@ -558,8 +558,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733786619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: 2.2, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 0.69, y: 0.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1493363225}
   m_RootOrder: 1
@@ -781,11 +781,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e8b1e1a2fe98548811c16538634550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolTime: 0.5
+  coolTime: 0.2
   pos: {fileID: 659157539}
-  boxSize: {x: 1.3, y: 2.4}
+  boxSize: {x: 1.5, y: 3.5}
+  ComboCount: 0
   UpdateComboCount: 3
   comboCoolTime: 2
+  animator: {fileID: 0}
 --- !u!70 &1493363223
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -799,8 +801,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 7, y: 17}
+  m_Offset: {x: 0.5, y: 0.3}
+  m_Size: {x: 1.7, y: 4}
   m_Direction: 0
 --- !u!212 &1493363224
 SpriteRenderer:
@@ -842,7 +844,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3b81aae7b951734459c6798587b5b452, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74641759ef3c91b4993cd3a39941b331, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -861,8 +863,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493363220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8, y: 2.09, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -5.8, y: 2.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 659157539}
   - {fileID: 733786620}
@@ -880,7 +882,7 @@ Animator:
   m_GameObject: {fileID: 1493363220}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4957431f371d78e4eae01927552990ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 499c73be4f008384f90b32b889a8b31d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
