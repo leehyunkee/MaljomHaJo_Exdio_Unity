@@ -9,7 +9,7 @@ public class Boss2 : MonoBehaviour
     public GameObject bigBullet;
     void Start()
     {
-        StartCoroutine(BigBullet());
+        StartCoroutine(BigBullet(4f));
     }
     Vector2 destination = new Vector2(11, 0);
     // Update is called once per frame
@@ -28,9 +28,20 @@ public class Boss2 : MonoBehaviour
 
         if(bossSkill)
         {
+            transform.DetachChildren();
             transform.position = Vector2.MoveTowards(transform.position, destination, Time.deltaTime*2f);
             if (transform.position.x >= 11)
                 bossSkill = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            StartCoroutine(MoveUpDown());
+        }
+
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(Phase2());
         }
     }
 
@@ -67,10 +78,47 @@ public class Boss2 : MonoBehaviour
         
     }
 
-    IEnumerator BigBullet()
+    IEnumerator BigBullet(float time)
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(time);
         GameObject bullet = Instantiate(bigBullet, transform.position, Quaternion.identity);
-        StartCoroutine(BigBullet());
+        StartCoroutine(BigBullet(time));
+    }
+
+    IEnumerator Phase2()
+    {
+        int a = Random.Range(2, 6);
+        for (int i = 0; i < a; i++)
+        {
+           
+            GameObject bullet = Instantiate(bigBullet, transform.position, Quaternion.identity);
+            if (i == a - 1)
+            {
+                Debug.Log("color");
+                bullet.GetComponent<SpriteRenderer>().color = new Color(132, 0, 0);
+            }
+            yield return new WaitForSeconds(0.5f);
+        }
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(Phase2());
+    }
+
+    IEnumerator MoveUpDown()
+    {
+        float speed = 0.1f;
+        while(true)
+        {
+            // transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, 6), 1f);
+            transform.Translate(0, speed, 0);
+            if(transform.position.y>5)
+            {
+                speed *= -1;
+            }
+            if(transform.position.y<-5)
+            {
+                speed *= -1;
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
