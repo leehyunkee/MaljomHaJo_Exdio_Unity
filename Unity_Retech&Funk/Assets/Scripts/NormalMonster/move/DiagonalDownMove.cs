@@ -26,9 +26,5 @@ public class DiagonalDownMove : MonoBehaviour
         currentPositionY += Time.deltaTime * directionY;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
 
-        if (currentPositionX < -10)
-        {
-            Destroy(gameObject);
-        }
     }
 }

@@ -5,32 +5,40 @@ using UnityEngine;
 public class RightMouseAttack : MonoBehaviour
 {
     private float curTime;
-    public float coolTime = 0.5f;
+    public float coolTime = 0.3f;
     public Transform pos;
     public Vector2 boxSize;
 
-    private float ComboCount = 3;
+    public float ComboCount = 0;
     public float UpdateComboCount = 3;
     private float comboCurTime;
     public float comboCoolTime;
 
     private PlayerParry parrying;
+    public Animator animator;
     private void Awake()
     {
         parrying = GameObject.Find("ParryPos").GetComponent<PlayerParry>();
         //특정 스크립트를 불러오기 위한 코드
     }
 
-  //public bool parryBullet = false;
+    //public bool parryBullet = false;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         if (curTime <= 0 && comboCurTime <= 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                ComboCount-=1;
+                ComboCount+=1;
+                
                 Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                animator.SetFloat("Blend",ComboCount);
+                animator.SetTrigger("Atk");
                 foreach (Collider2D collider in collider2Ds)
                 {
                     Debug.Log(collider.gameObject.tag);
@@ -51,10 +59,10 @@ public class RightMouseAttack : MonoBehaviour
             }
             
             
-            if (ComboCount <= 0)
+            if (ComboCount >= UpdateComboCount)
             {
                 comboCurTime = comboCoolTime;
-                ComboCount = UpdateComboCount;
+                ComboCount = 0;
             }
         }
         else

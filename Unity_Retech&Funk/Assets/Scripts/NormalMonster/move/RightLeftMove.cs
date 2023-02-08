@@ -25,9 +25,5 @@ public class RightLeftMove : MonoBehaviour
          currentPositionX += Time.deltaTime * direction;
             this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
 
-        if (currentPositionX < -10)
-        {
-            Destroy(gameObject);
-        }
     }
 }
