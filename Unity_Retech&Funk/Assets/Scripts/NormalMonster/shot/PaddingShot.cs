@@ -41,7 +41,7 @@ public class PaddingShot : MonoBehaviour
         temp.transform.position = pos; // 몬스터의 현재 위치에서 총알 복제
         turnbullet = 1;
 
-        yield return new WaitForSeconds(0.3f); // 3초 간격으로 복제
+        yield return new WaitForSeconds(0.7f); // 0.7초 간격으로 복제
 
         StartCoroutine("pShot"); //반복해서 함수 수행
 
@@ -57,7 +57,7 @@ public class PaddingShot : MonoBehaviour
         GameObject temp3 = Instantiate(bullet, pos, Quaternion.Euler(0, 0, -15f));
         turnbullet = 1;
 
-        yield return new WaitForSeconds(0.5f); // 5초 간격으로 복제
+        yield return new WaitForSeconds(1f); // 1초 간격으로 복제
         StartCoroutine("pShot2"); //반복해서 함수 수행
     }
 
@@ -69,7 +69,7 @@ public class PaddingShot : MonoBehaviour
         temp.transform.position = pos; // 몬스터의 현재 위치에서 총알 복제
         turnbullet = 1;
 
-        yield return new WaitForSeconds(0.3f); // 3초 간격으로 복제
+        yield return new WaitForSeconds(0.7f); // 0.7초 간격으로 복제
 
         StartCoroutine("Shot"); //반복해서 함수 수행
     }
@@ -84,7 +84,7 @@ public class PaddingShot : MonoBehaviour
         GameObject temp3 = Instantiate(pbullet, pos, Quaternion.Euler(0, 0, -15f));
         turnbullet = 1;
 
-        yield return new WaitForSeconds(0.5f); // 5초 간격으로 복제
+        yield return new WaitForSeconds(1f); // 1초 간격으로 복제
 
         StartCoroutine("Shot2"); //반복해서 함수 수행
     }

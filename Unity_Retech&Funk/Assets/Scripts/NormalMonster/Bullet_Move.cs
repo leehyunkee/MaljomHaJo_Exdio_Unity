@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Bullet_Move : MonoBehaviour {
 
-    public float speed = 10f;
+    public float speed = 5f;
 
     private void Start()
     {
         //생성으로부터 2초 후 삭제
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 5f);
     }
 
     private void Update()

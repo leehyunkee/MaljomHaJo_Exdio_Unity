@@ -56,7 +56,7 @@ public class Firstmove : MonoBehaviour
 
     void updownmove()
     {
-        directionY = 3.0f;
+        directionY = 1.0f;
 
         float currentPositionY = transform.position.y;
 
@@ -82,15 +82,15 @@ public class Firstmove : MonoBehaviour
 
     void RightLeftMove()
     {
-        directionX = -6.0f;
+        directionX = -2.0f;
         currentPositionX += Time.deltaTime * directionX;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
     }
 
     void DiagonalDownMove()
     {
-        directionX = -6.0f;
-        directionY = -3.0f;
+        directionX = -2.0f;
+        directionY = -1.0f;
 
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;
@@ -99,8 +99,8 @@ public class Firstmove : MonoBehaviour
 
     void DiagonalUpMove()
     {
-        directionX = -6.0f;
-        directionY = 3.0f;
+        directionX = -2.0f;
+        directionY = 1.0f;
 
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;

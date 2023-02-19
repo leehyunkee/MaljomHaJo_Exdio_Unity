@@ -15,9 +15,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet(2) Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+      propertyPath: m_TagString
+      value: parry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972046724224974051, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5754128508243031501, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754128508243031501, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754128508243031501, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5754128508243031501, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
       propertyPath: m_LocalPosition.x

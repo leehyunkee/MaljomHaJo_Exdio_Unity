@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isHurt == false && collision.gameObject.tag == ("Enemy") || isHurt == false && collision.gameObject.tag == ("parry")) 
+        if (isHurt == false && collision.gameObject.tag == ("parry") || isHurt == false && collision.gameObject.tag == ("NormalBullet")) 
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
             Hurt();
             
         }
-        else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("parry"))
+        else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("Enemy"))
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
