@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Final_shot : MonoBehaviour
+public class FirstShot : MonoBehaviour
 {
     GameObject bullet; // 총알 오브젝트
     Vector2 pos;
-
-    public int angleInterval = 10;
-    public int startAngle = 0;
-    public int endAngle = 360;
 
     int randombullet;
 
@@ -21,7 +17,7 @@ public class Final_shot : MonoBehaviour
         int BulletIndex = Random.Range(0, BulletPrefab.Length);
         bullet = BulletPrefab[BulletIndex];
 
-        randombullet = Random.Range(0, 5);
+        randombullet = Random.Range(0, 2);
 
         if (randombullet == 0)
         {
@@ -31,17 +27,6 @@ public class Final_shot : MonoBehaviour
         {
             StartCoroutine("Shot2");
         }
-        else
-        {
-            StartCoroutine("Shot3");
-        }
-
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    Vector3 spawnPos = new Vector3(Random.Range(0, spawnRangeX), Random.Range(-spawnRangeY, spawnRangeY), spawnposZ);
-        //    int monsterIndex = Random.Range(0, monsterPrefab.Length);
-        //    Instantiate(monsterPrefab[monsterIndex], spawnPos, monsterPrefab[monsterIndex].transform.rotation);
-        //}
     }
 
 
@@ -67,28 +52,5 @@ public class Final_shot : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f); // 5초 간격으로 복제
         StartCoroutine("Shot2"); //반복해서 함수 수행
-    }
-
-    IEnumerator Shot3()
-    {
-
-        while (true)
-        {
-
-            for (int fireAngle = startAngle; fireAngle < endAngle; fireAngle += angleInterval)
-            {
-                GameObject temp = Instantiate(bullet);
-                temp.transform.position = pos;
-                Vector2 direction = new Vector2(Mathf.Cos(fireAngle * Mathf.Rad2Deg), Mathf.Sin(fireAngle * Mathf.Rad2Deg)); //임시(완전히 동그랗지 않음)
-
-                temp.transform.right = direction;
-                temp.transform.position = transform.position;
-            }
-
-            yield return new WaitForSeconds(2.0f);
-            StartCoroutine("Shot3"); //반복해서 함수 수행
-
-        }
-
     }
 }

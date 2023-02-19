@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Final_move : MonoBehaviour
+public class Secendmove : MonoBehaviour
 {
     float UpMax = 2.0f; //좌로 이동가능한 (x)최대값
 
@@ -15,6 +15,8 @@ public class Final_move : MonoBehaviour
     float timer;
 
     int randommove;
+
+    bool turnSwitch = true;
 
     // Start is called before the first frame update
 
@@ -49,45 +51,37 @@ public class Final_move : MonoBehaviour
         {
             curvemove();
         }
-    }
-
-    void updownmove()
-    {
-        directionY = 3.0f;
-        currentPositionY += Time.deltaTime * directionY;
-
-        if (currentPositionY >= UpMax)
-
-        {
-
-            directionY *= -1;
-
-        }
-
-        //현재 위치(x)가 우로 이동가능한 (x)최대값보다 크거나 같다면
-
-        //이동속도+방향에 -1을 곱해 반전을 해주고 현재위치를 우로 이동가능한 (x)최대값으로 설정
-
-        else if (currentPositionY <= DownMax)
-
-        {
-
-            directionY *= -1;
-
-
-        }
-
-        //현재 위치(x)가 좌로 이동가능한 (x)최대값보다 크거나 같다면
-
-        //이동속도+방향에 -1을 곱해 반전을 해주고 현재위치를 좌로 이동가능한 (x)최대값으로 설정
-
-        this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
-        //"Stone"의 위치를 계산된 현재위치로 처리
 
         if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
         {
             Destroy(gameObject);
         }
+    }
+
+    void updownmove()
+    {
+        directionY = 3.0f;
+
+        float currentPositionY = transform.position.y;
+
+        if (currentPositionY >= UpMax)
+        {
+            turnSwitch = false;
+        }
+        else if (currentPositionY <= DownMax)
+        {
+            turnSwitch = true;
+        }
+
+        if (turnSwitch)
+        {
+            transform.position = transform.position + new Vector3(0, 1, 0) * directionY * Time.deltaTime;
+        }
+        else
+        {
+            transform.position = transform.position + new Vector3(0, -1, 0) * directionY * Time.deltaTime;
+        }
+
     }
 
 
@@ -96,11 +90,6 @@ public class Final_move : MonoBehaviour
         directionX = -6.0f;
         currentPositionX += Time.deltaTime * directionX;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
-
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void DiagonalDownMove()
@@ -111,11 +100,6 @@ public class Final_move : MonoBehaviour
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
-
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void DiagonalUpMove()
@@ -126,11 +110,6 @@ public class Final_move : MonoBehaviour
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
-
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void curvemove()
@@ -156,11 +135,6 @@ public class Final_move : MonoBehaviour
         else
         {
             StartCoroutine(WaitForIt());
-        }
-
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
-        {
-            Destroy(gameObject);
         }
     }
 

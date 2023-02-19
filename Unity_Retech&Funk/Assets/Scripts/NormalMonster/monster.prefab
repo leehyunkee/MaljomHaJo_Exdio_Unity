@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5313996043402297279}
   - component: {fileID: 5313996043402297278}
+  - component: {fileID: 7892404992662172928}
+  - component: {fileID: 116780009997542953}
   m_Layer: 0
   m_Name: BulletSpawner
   m_TagString: Untagged
@@ -38,17 +40,52 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5313996043402297276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3486614c2edd534c96a88a5a58f0db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
   angleInterval: 10
   startAngle: 0
   endAngle: 360
   BulletPrefab:
   - {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  - {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+--- !u!114 &7892404992662172928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313996043402297276}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609404d24be6edc4cb441dc901832d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab:
+  - {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  - {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  PBulletPrefab:
+  - {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+  - {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
+--- !u!114 &116780009997542953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313996043402297276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27131781d3d90946a31d8ccfdf72538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab:
+  - {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  - {fileID: 374849102967375930, guid: 02a4f945a2ece584ab7048aeb10537fc, type: 3}
+  PBulletPrefab:
+  - {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
   - {fileID: 4318889075989995917, guid: ecce64eb6536f9b4c8ff73fcd24b11fb, type: 3}
 --- !u!1 &5313996044304130844
 GameObject:
@@ -61,6 +98,7 @@ GameObject:
   - component: {fileID: 5313996044304130816}
   - component: {fileID: 5313996044304130817}
   - component: {fileID: 5313996044304130847}
+  - component: {fileID: 195157344201098648}
   m_Layer: 0
   m_Name: monster
   m_TagString: Enemy
@@ -141,8 +179,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5313996044304130844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac5af5604f658ab4e8b91692ddbf46ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &195157344201098648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313996044304130844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd7f7ccfc27386409ef79f0a2eb8ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
