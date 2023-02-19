@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class randomspwan : MonoBehaviour
+public class prandomspawn : MonoBehaviour
 {
-
     public GameObject monsterPrefab;
-    private float spawnRangeX = 11;
-    private float spawnRangeY = 6;
+    private float spawnRangeX = 11f;
+    private float spawnRangeY = 6f;
     private float spawnposZ = 20;
 
 
     //몬스터를 발생시킬 주기
     public float createTime;
     //몬스터의 최대 발생 개수
-    public int maxMonster = 10;
+    public int maxMonster = 3;
     //게임 종료 여부 변수
     public bool isGameOver = false;
     float timer = 0;
@@ -40,12 +39,12 @@ public class randomspwan : MonoBehaviour
     {
 
         while (!isGameOver)
-     {
-        //현재 생성된 몬스터 개수 산출
+        {
+            //현재 생성된 몬스터 개수 산출
             int monsterCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-         if (monsterCount < maxMonster && timer <30)
-          {
+            if (monsterCount < maxMonster && timer < 30)
+            {
                 //몬스터의 생성 주기 시간만큼 대기
                 yield return new WaitForSeconds(createTime);
 
@@ -53,11 +52,10 @@ public class randomspwan : MonoBehaviour
                 Vector3 spawnPos = new Vector3(Random.Range(0, spawnRangeX), Random.Range(-spawnRangeY, spawnRangeY), spawnposZ);
                 Instantiate(monsterPrefab, spawnPos, monsterPrefab.transform.rotation);
             }
-         else
-          {
-               yield return null;
-          }
-     }
+            else
+            {
+                yield return null;
+            }
+        }
     }
 }
-

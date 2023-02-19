@@ -48,7 +48,7 @@ public class Firstmove : MonoBehaviour
             DiagonalUpMove();
         }
 
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
+        if (currentPositionX < -14 || currentPositionX > 14 || currentPositionY < -5 || currentPositionY > 5)
         {
             Destroy(gameObject);
         }

@@ -16,7 +16,6 @@ public class stage : MonoBehaviour
             DestroyClone();
         }
 
-
     }
 
     public void DestroyClone()
