@@ -44,6 +44,7 @@ public class RightMouseAttack : MonoBehaviour
                     Debug.Log(collider.gameObject.tag);
                     if (collider.gameObject.tag == "Enemy")     //박스 내에서 감지한 물체의 tag == Enemy(잡몹)일 경우 
                     {
+                        Destroy(collider.gameObject);
                         Debug.Log("적에게 데미지");
                     }
                     else if (collider.gameObject.tag == "parry")//박스 내에서 감지한 물체의 tag == parry(패링 가능한 탄막)일 경우

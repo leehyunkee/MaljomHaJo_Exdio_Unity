@@ -10,6 +10,7 @@ TagManager:
   - sdEnemy
   - ParryCollide
   - PlayerBullet
+  - PlayerATK
   layers:
   - Default
   - TransparentFX
