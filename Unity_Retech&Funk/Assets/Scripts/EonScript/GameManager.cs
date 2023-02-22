@@ -7,24 +7,43 @@ public class GameManager : MonoBehaviour
 {
     public GameObject StopImg;
     public GameObject stageStartImg;
+    public GameObject bossWarning;
+
     Animator stageAnim;
+    Animator warningAnim;
     bool escapeKey = false;
+
+    public float waitTime = 10f;
+
+    public GameObject theBoss;
 
     private void Start()
     {
         stageAnim = stageStartImg.GetComponent<Animator>();
-        stageStartImg.SetActive(true);
+        warningAnim = bossWarning.GetComponent<Animator>();
         StartCoroutine(StartStageAnim());
+        StartCoroutine(StartBoss());
+    }
+
+    IEnumerator StartBoss()
+    {
+        yield return new WaitForSeconds(waitTime);
+        bossWarning.SetActive(true);
+        warningAnim.SetTrigger("Warning");
+        yield return new WaitForSeconds(3.5f);
+        bossWarning.SetActive(false);
+        theBoss.SetActive(true);
     }
 
     IEnumerator StartStageAnim()
     {
+        stageStartImg.SetActive(true);
         stageAnim.SetTrigger("StartStage1");
-        yield return new WaitForSeconds(0.01f);
+        //yield return new WaitForSeconds(0.01f);
 
-        float curAnimationTime = stageAnim.GetCurrentAnimatorStateInfo(0).length;
+        //float curAnimationTime = stageAnim.GetCurrentAnimatorStateInfo(0).length;
 
-        yield return new WaitForSeconds(curAnimationTime);
+        yield return new WaitForSeconds(2f);
         stageStartImg.SetActive(false);
       
 

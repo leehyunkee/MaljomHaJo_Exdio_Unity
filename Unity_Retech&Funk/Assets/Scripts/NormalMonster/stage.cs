@@ -11,7 +11,7 @@ public class stage : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 30)
+        if (timer >= 10)
         {
             DestroyClone();
         }
