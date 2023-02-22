@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b731aa2b4d3aad149b536fcec60cdc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2823370690840763308, guid: 9b70511f296c8194db1063ac91b455d7, type: 3}
+  bullet: {fileID: 4610457081105527273, guid: bb017a2343d1e7849b14af6693524367, type: 3}
   parrypos: {fileID: 733786620}
   cooltime: 0
   isParry: 0
@@ -998,7 +998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 39d03ae44062c0f42993c335520c1c35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
