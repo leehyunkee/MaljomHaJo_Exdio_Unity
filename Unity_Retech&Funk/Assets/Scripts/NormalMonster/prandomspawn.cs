@@ -5,8 +5,7 @@ using UnityEngine;
 public class prandomspawn : MonoBehaviour
 {
     public GameObject monsterPrefab;
-    private float spawnRangeX = 11f;
-    private float spawnRangeY = 6f;
+    private float spawnRangeY = 3f;
     private float spawnposZ = 20;
 
 
@@ -43,13 +42,13 @@ public class prandomspawn : MonoBehaviour
             //현재 생성된 몬스터 개수 산출
             int monsterCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-            if (monsterCount < maxMonster && timer < 30)
+            if (monsterCount < maxMonster && timer < 10)
             {
                 //몬스터의 생성 주기 시간만큼 대기
                 yield return new WaitForSeconds(createTime);
 
                 //불규칙적인 위치 산출
-                Vector3 spawnPos = new Vector3(Random.Range(0, spawnRangeX), Random.Range(-spawnRangeY, spawnRangeY), spawnposZ);
+                Vector3 spawnPos = new Vector3(Random.Range(5f, 8.5f), Random.Range(-spawnRangeY, spawnRangeY), spawnposZ);
                 Instantiate(monsterPrefab, spawnPos, monsterPrefab.transform.rotation);
             }
             else
