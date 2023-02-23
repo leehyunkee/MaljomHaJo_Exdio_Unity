@@ -14,7 +14,9 @@ public class PlayerHealth : MonoBehaviour
     
     public int Hp = 3;
     public int nowHp ;
+    int HeartCount = 3;
 
+    public GameObject[] heart;
 
     void Start()
     {
@@ -28,24 +30,26 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isHurt == false && collision.gameObject.tag == ("parry") || isHurt == false && collision.gameObject.tag == ("NormalBullet")) 
+        if (isHurt == false && collision.gameObject.tag == ("parry") || isHurt == false && collision.gameObject.tag == ("NormalBullet") || isHurt == false && collision.gameObject.tag == ("Enemy")) 
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
             Destroy(collision.gameObject);
+            heart[HeartCount-1].SetActive(false);
+            HeartCount--;
             Debug.Log("탄막충돌");
             Hurt();
             
         }
-        else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("Enemy"))
-        {
-            //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
+        //else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("Enemy"))
+        //{
+        //    //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
             
-            Debug.Log("잡몹충돌");
-            Hurt();
+        //    Debug.Log("잡몹충돌");
+        //    Hurt();
 
-        }
+        //}
 
     }
     public void Hurt()
