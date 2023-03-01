@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class PlayerHealth : MonoBehaviour
             Destroy(collision.gameObject);
             heart[HeartCount-1].SetActive(false);
             HeartCount--;
+            if(HeartCount ==0)
+            {
+                SceneManager.LoadScene("Title");
+            }
             Debug.Log("Åº¸·Ãæµ¹");
             Hurt();
             

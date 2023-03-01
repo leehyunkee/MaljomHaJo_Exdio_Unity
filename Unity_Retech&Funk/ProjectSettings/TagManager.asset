@@ -11,6 +11,7 @@ TagManager:
   - ParryCollide
   - PlayerBullet
   - PlayerATK
+  - Boss
   layers:
   - Default
   - TransparentFX

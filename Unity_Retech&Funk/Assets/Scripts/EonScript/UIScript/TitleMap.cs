@@ -7,7 +7,7 @@ public class TitleMap : MonoBehaviour
 {
    public void ChangeScene()
     {
-        SceneManager.LoadScene("Eon");
+        SceneManager.LoadScene("FinalResult");
     }
 
     public void End()

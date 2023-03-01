@@ -10,6 +10,7 @@ public class Boss_1 : MonoBehaviour
     //public GameObject mob;
     float timeCheck;
     bool goRush = false;
+    bool bossStart = true;
 
     Vector3 direction;
     void Start()
@@ -21,18 +22,28 @@ public class Boss_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(bossStart)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(5.5f, 0, 0), 
+                5 * Time.deltaTime);
+
+            if (transform.position.x <= 5.5f) 
+                bossStart = false;
+        }
         if(Input.GetKeyDown(KeyCode.Z))
         {
-            
-            direction = player.transform.position - this.transform.position;
-            goRush = true;
+
+           // direction = player.transform.position - this.transform.position;
+            //goRush = true;
+            StartCoroutine(rush());
         }
         
         if(goRush)
         {
             //Vector3 direction = player.transform.position - this.transform.position;
             direction.Normalize();
-            this.transform.position = this.transform.position + direction*5  * Time.deltaTime;
+           // this.transform.position = this.transform.position + direction*5  * Time.deltaTime;
+            
             //mob.transform.position = mob.transform.position + direction * 0.01f * Time.deltaTime;
             Debug.Log("1");
             
@@ -48,16 +59,25 @@ public class Boss_1 : MonoBehaviour
 
     IEnumerator rush()
     {
-        Vector3 direction = player.transform.position - this.transform.position;
+        direction = player.transform.position - this.transform.position;
+        
         direction.Normalize();
+        direction.x = -33f;
         while (this.gameObject.transform.position.x > -30f)
         {
-            this.transform.position = this.transform.position + direction * 0.01f * Time.deltaTime;
+            Debug.Log(direction);
+            //this.transform.position = this.transform.position + direction * 0.01f * Time.deltaTime;
             //mob.transform.position = mob.transform.position + direction * 0.01f * Time.deltaTime;
+            //gameObject.transform.Translate(direction);
+            transform.position = Vector3.MoveTowards(transform.position, direction, 0.1f);
             Debug.Log("1");
+            yield return new WaitForSeconds(0.01f);
         }
-
+        transform.position = new Vector3(20f, 0, 0);
+        bossStart = true;
         yield return null;
+
+        
     }
    
 }
