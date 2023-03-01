@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313996044304130817, guid: 823e3d19289ea604ea16441b603d0db4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 5313996044304130844, guid: 823e3d19289ea604ea16441b603d0db4, type: 3}
       propertyPath: m_Name
       value: pmonster Variant
