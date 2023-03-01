@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c30afe698ec0a4785129833c210529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 5313996044304130844, guid: 823e3d19289ea604ea16441b603d0db4, type: 3}
+  monsterPrefab: {fileID: 6523643154504477034, guid: e3e44f564ca3f3e478b86da68f4d5f21, type: 3}
   createTime: 0
   maxMonster: 7
   isGameOver: 0

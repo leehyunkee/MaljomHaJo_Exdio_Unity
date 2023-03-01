@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Secendmove : MonoBehaviour
 {
-    float UpMax = 2.0f; //좌로 이동가능한 (x)최대값
+    float UpMax = 3.0f; //좌로 이동가능한 (x)최대값
 
-    float DownMax = -2.0f; //우로 이동가능한 (x)최대값
+    float DownMax = -3.0f; //우로 이동가능한 (x)최대값
 
     float currentPositionY, currentPositionX; //현재 위치(x) 저장
 
@@ -25,7 +25,7 @@ public class Secendmove : MonoBehaviour
         currentPositionX = this.gameObject.transform.localPosition.x;
         currentPositionY = this.gameObject.transform.localPosition.y;
 
-        randommove = Random.Range(0, 5);
+        randommove = Random.Range(0, 6);
     }
 
     // Update is called once per frame
@@ -47,12 +47,17 @@ public class Secendmove : MonoBehaviour
         {
             DiagonalUpMove();
         }
-        else
+        else if (randommove == 4)
         {
             curvemove();
         }
+        else
+        {
+            this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
+        }
 
-        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
+
+        if (currentPositionX < -14 || currentPositionX > 14 || currentPositionY < -5 || currentPositionY > 5)
         {
             Destroy(gameObject);
         }
