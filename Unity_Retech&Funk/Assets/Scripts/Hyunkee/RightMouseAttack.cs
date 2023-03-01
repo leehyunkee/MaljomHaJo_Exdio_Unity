@@ -16,6 +16,10 @@ public class RightMouseAttack : MonoBehaviour
 
     private PlayerParry parrying;
     public Animator animator;
+
+    public GameObject particles1;
+    public GameObject particles2;
+
     private void Awake()
     {
         parrying = GameObject.Find("ParryPos").GetComponent<PlayerParry>();
@@ -27,6 +31,8 @@ public class RightMouseAttack : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        particles1.SetActive(false);
+        particles2.SetActive(false);
     }
     private void Update()
     {
@@ -36,6 +42,22 @@ public class RightMouseAttack : MonoBehaviour
             {
                 ComboCount+=1;
                 
+                if(ComboCount == 1)
+                {
+                    particles2.SetActive(false);
+                    particles2.SetActive(true);
+                    particles1.SetActive(false);
+                }
+                else if (ComboCount == 2)
+                {
+                    particles1.SetActive(true);
+                    particles2.SetActive(false);
+                }
+                else if (ComboCount == 3)
+                {
+                    particles2.SetActive(true);
+                    particles1.SetActive(false);
+                }
                 Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
                 animator.SetFloat("Blend",ComboCount);
                 animator.SetTrigger("Atk");
@@ -53,6 +75,9 @@ public class RightMouseAttack : MonoBehaviour
                         Destroy(collider.gameObject);           //탄막 소멸
                         //isParryTrue();
                         parrying.parryTrue();
+                    }
+                    else
+                    {
                     }
                     
                 }
@@ -73,6 +98,14 @@ public class RightMouseAttack : MonoBehaviour
         }
     }
 
+    /*private void particleTrue()
+    {
+        particles.SetActive(true);
+    }
+    private void particleFalse()
+    {
+        particles.SetActive(false);
+    }*/
     private void OnDrawGizmos()
     {
         //범위 사이즈 확인을 위해 넣어둔 코드
