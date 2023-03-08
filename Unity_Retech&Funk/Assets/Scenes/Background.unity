@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &21945211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.8
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &171682475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &329391745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &480534601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.7
-  posValue: 35
+  posValue: 24.50337
 --- !u!212 &515266948
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.2
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &647533797
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.4
-  posValue: 35
+  posValue: 24.50337
 --- !u!212 &693250112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.2
-  posValue: 70
+  posValue: 49.00674
 --- !u!1 &789192208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.7
-  posValue: 35.00241
+  posValue: 24.50337
 --- !u!212 &789192210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &887625920
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &1189141948
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &1492183730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2308,7 +2308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.3
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &1662296010
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.3
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &1665340771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2668,7 +2668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.8
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &1943209933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.6
-  posValue: 35
+  posValue: 24.50337
 --- !u!1 &2060694910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &2060694912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  posValue: 35
+  posValue: 24.50337
 --- !u!212 &2071583201
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3060,7 +3060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  posValue: 70
+  posValue: 49.00674
 --- !u!212 &2087939077
 SpriteRenderer:
   m_ObjectHideFlags: 0
