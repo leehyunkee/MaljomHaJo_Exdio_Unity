@@ -6,12 +6,14 @@ public class Boss_1 : MonoBehaviour
 {
     //public GameObject playerObject;
     public GameObject bulletPrefab;
+    public GameObject sprinkleBullet;
     GameObject player;
     //public GameObject mob;
     float timeCheck;
     bool goRush = false;
     bool bossStart = true;
 
+   
     Vector3 direction;
     void Start()
     {
@@ -37,6 +39,11 @@ public class Boss_1 : MonoBehaviour
             //goRush = true;
             StartCoroutine(rush());
         }
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            StartCoroutine(Sprinkle());
+        }
         
         if(goRush)
         {
@@ -50,9 +57,16 @@ public class Boss_1 : MonoBehaviour
         }
     }
 
+    IEnumerator Sprinkle()
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject bullet = Instantiate(sprinkleBullet, transform.position, Quaternion.identity);
+        bullet.transform.localScale = new Vector3(1, 1, 1);
+        
+    }
     IEnumerator MakeBullet()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         GameObject bullet = Instantiate(bulletPrefab, transform.position,Quaternion.identity);
         StartCoroutine("MakeBullet");
     }

@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         targetPos = GameObject.Find("Player").transform.position;
 
         myPos = transform.position;
-
+        Debug.Log((targetPos - myPos).normalized);
         newPos = (targetPos - myPos).normalized * bulletSpeed;
         Timer();
     }

@@ -106,12 +106,12 @@ public class RightMouseAttack : MonoBehaviour
     {
         particles.SetActive(false);
     }*/
-    private void OnDrawGizmos()
-    {
-        //범위 사이즈 확인을 위해 넣어둔 코드
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(pos.position, boxSize);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    //범위 사이즈 확인을 위해 넣어둔 코드
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawWireCube(pos.position, boxSize);
+    //}
     /*public void isParryTrue()
     {
         parryBullet = true;
