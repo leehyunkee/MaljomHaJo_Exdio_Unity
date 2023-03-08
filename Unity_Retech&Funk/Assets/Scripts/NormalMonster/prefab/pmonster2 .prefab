@@ -25,6 +25,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 956385685649198856, guid: b54b31119c43d6b4d809ca20a1e5a579, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3091760305445215013, guid: b54b31119c43d6b4d809ca20a1e5a579, type: 3}
       propertyPath: m_Name
       value: 'pmonster2 '
@@ -71,6 +75,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234490327078727723, guid: b54b31119c43d6b4d809ca20a1e5a579, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921157906043696873, guid: b54b31119c43d6b4d809ca20a1e5a579, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

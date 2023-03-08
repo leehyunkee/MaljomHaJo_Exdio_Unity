@@ -42,7 +42,7 @@ public class prandomspawn : MonoBehaviour
             //현재 생성된 몬스터 개수 산출
             int monsterCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-            if (monsterCount < maxMonster && timer < 10)
+            if (monsterCount < maxMonster && timer < 60)
             {
                 //몬스터의 생성 주기 시간만큼 대기
                 yield return new WaitForSeconds(createTime);

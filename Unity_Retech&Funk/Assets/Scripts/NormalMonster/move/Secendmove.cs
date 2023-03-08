@@ -57,7 +57,7 @@ public class Secendmove : MonoBehaviour
         }
 
 
-        if (currentPositionX < -14 || currentPositionX > 14 || currentPositionY < -5 || currentPositionY > 5)
+        if (currentPositionX < -10 || currentPositionX > 10 || currentPositionY < -6 || currentPositionY > 6)
         {
             Destroy(gameObject);
         }
@@ -65,7 +65,7 @@ public class Secendmove : MonoBehaviour
 
     void updownmove()
     {
-        directionY = 3.0f;
+        directionY = 1.0f;
 
         float currentPositionY = transform.position.y;
 
@@ -92,15 +92,15 @@ public class Secendmove : MonoBehaviour
 
     void RightLeftMove()
     {
-        directionX = -6.0f;
+        directionX = -2.0f;
         currentPositionX += Time.deltaTime * directionX;
         this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
     }
 
     void DiagonalDownMove()
     {
-        directionX = -6.0f;
-        directionY = -3.0f;
+        directionX = -2.0f;
+        directionY = -1.0f;
 
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;
@@ -109,8 +109,8 @@ public class Secendmove : MonoBehaviour
 
     void DiagonalUpMove()
     {
-        directionX = -6.0f;
-        directionY = 3.0f;
+        directionX = -2.0f;
+        directionY = 1.0f;
 
         currentPositionX += Time.deltaTime * directionX;
         currentPositionY += Time.deltaTime * directionY;
@@ -119,22 +119,22 @@ public class Secendmove : MonoBehaviour
 
     void curvemove()
     {
-        directionX = -6.0f;
-        directionY = 3.0f;
+        directionX = -2.0f;
+        directionY = 1.0f;
 
         timer += Time.deltaTime;
 
-        if (timer < 1.2)
+        if (timer < 1.2f)
         {
             currentPositionX += Time.deltaTime * directionX;
             currentPositionY += Time.deltaTime * directionY;
             this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
         }
-        else if (timer >= 1.2 || timer < 2.4)
+        else if (timer >= 1.2f || timer < 2.4f)
         {
 
             currentPositionX += -Time.deltaTime * directionX;
-            currentPositionY += Time.deltaTime * directionY;
+            currentPositionY += -Time.deltaTime * directionY;
             this.gameObject.transform.localPosition = new Vector2(currentPositionX, currentPositionY);
         }
         else
