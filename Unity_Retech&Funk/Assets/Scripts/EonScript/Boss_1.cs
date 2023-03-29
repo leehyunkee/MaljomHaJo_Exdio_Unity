@@ -7,6 +7,7 @@ public class Boss_1 : MonoBehaviour
     //public GameObject playerObject;
     public GameObject bulletPrefab;
     public GameObject sprinkleBullet;
+    public GameObject gun;
     GameObject player;
     //public GameObject mob;
     float timeCheck;
@@ -87,7 +88,7 @@ public class Boss_1 : MonoBehaviour
             Debug.Log("1");
             yield return new WaitForSeconds(0.01f);
         }
-        transform.position = new Vector3(20f, 0, 0);
+        transform.position = new Vector3(gun.transform.position.x, gun.transform.position.y, 0);
         bossStart = true;
         yield return null;
 

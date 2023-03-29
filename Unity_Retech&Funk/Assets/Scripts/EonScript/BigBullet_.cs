@@ -16,7 +16,7 @@ public class BigBullet_ : Bullet
     IEnumerator ReadyCircle()
     {
         Debug.Log("hi");
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(1.0f);
         for (int i = 0; i < 360; i += 13)
         {
             //ÃÑ¾Ë »ý¼º
