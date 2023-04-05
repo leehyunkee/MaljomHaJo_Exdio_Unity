@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public int nowHp ;
     int HeartCount = 3;
 
-    public GameObject[] heart;
+    public GameObject[] Heart;
 
     void Start()
     {
@@ -35,15 +35,17 @@ public class PlayerHealth : MonoBehaviour
         {
             //collision이 충돌체의 정보를 다 갖고있음. => 부딫힌 gameobject 자체를 바로 없앨 수 있음
 
+            
             Destroy(collision.gameObject);
-            heart[HeartCount-1].SetActive(false);
-            HeartCount--;
+            Hurt();
+            Heart[HeartCount-1].SetActive(false);
+            HeartCount--;    //체력 감소때 이용했던 것이지만 테스트용임
             if(HeartCount ==0)
             {
                 SceneManager.LoadScene("Title");
             }
             Debug.Log("탄막충돌");
-            Hurt();
+            
             
         }
         //else if (isHurt == false && collision.gameObject.tag == ("sdEnemy") || isHurt == false && collision.gameObject.tag == ("Enemy"))
@@ -68,7 +70,8 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("데미지 들어감");
             if (nowHp <= 0)
             {
-                Invoke("freeze", 1);
+                //Invoke("freeze", 1);
+                Debug.Log("체력0");
             }
             else
             {
