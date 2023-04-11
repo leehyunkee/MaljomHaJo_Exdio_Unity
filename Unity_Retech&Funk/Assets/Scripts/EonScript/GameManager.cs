@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     Animator stageAnim;
     Animator warningAnim;
     bool escapeKey = false;
+    bool bossStart = false;
 
     public float waitTime = 10f;
 
@@ -22,12 +23,12 @@ public class GameManager : MonoBehaviour
         stageAnim = stageStartImg.GetComponent<Animator>();
         warningAnim = bossWarning.GetComponent<Animator>();
         StartCoroutine(StartStageAnim());
-        StartCoroutine(StartBoss());
+        //StartCoroutine(StartBoss());
     }
 
     IEnumerator StartBoss()
     {
-        yield return new WaitForSeconds(waitTime);
+        //yield return new WaitForSeconds(waitTime);
         bossWarning.SetActive(true);
         warningAnim.SetTrigger("Warning");
         yield return new WaitForSeconds(3.5f);
@@ -50,9 +51,10 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(escapeKey == false)
+            if (escapeKey == false)
             {
                 StopImg.SetActive(true);
                 escapeKey = true;
@@ -62,10 +64,18 @@ public class GameManager : MonoBehaviour
                 StopImg.SetActive(false);
                 escapeKey = false;
             }
-            
-            
+
+
         }
 
+    }
+
+    private void LateUpdate()
+    {
+        if ((int)GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && bossStart == false)
+        {
+            StartCoroutine(StartBoss());
+        }
     }
 
     public void End()

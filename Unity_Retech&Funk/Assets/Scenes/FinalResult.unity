@@ -2805,9 +2805,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 1986581618896189869, guid: f0f486c9b4a92274180eb0a190a08c36, type: 3}
-  createTime: 0
-  maxMonster: 2
+  createTime: 2
+  maxMonster: 10
   isGameOver: 0
+  monsterTime: 10
 --- !u!114 &518186804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2815,7 +2816,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518186802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1065c74fb7ea2d642b8b5f8faf77ef99, type: 3}
   m_Name: 
@@ -2827,7 +2828,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518186802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c30afe698ec0a4785129833c210529, type: 3}
   m_Name: 
@@ -3046,7 +3047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &582451480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,7 +3122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582451479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.04, y: 1.15, z: 0}
+  m_LocalPosition: {x: 15.08, y: 1.15, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 452602133}
@@ -4728,7 +4729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &869021610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7272,7 +7273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1287039720
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8754,7 +8755,7 @@ MonoBehaviour:
   StopImg: {fileID: 113673503}
   stageStartImg: {fileID: 437594716}
   bossWarning: {fileID: 1335494246}
-  waitTime: 5
+  waitTime: 30
   theBoss: {fileID: 582451479}
 --- !u!4 &1568954176
 Transform:
@@ -10448,7 +10449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1964317853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10676,7 +10677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2007731552
 SpriteRenderer:
   m_ObjectHideFlags: 0

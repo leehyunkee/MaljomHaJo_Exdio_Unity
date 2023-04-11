@@ -16,7 +16,7 @@ public class prandomspawn : MonoBehaviour
     //게임 종료 여부 변수
     public bool isGameOver = false;
     float timer = 0;
-
+    public float monsterTime = 60;
     // Use this for initialization
     void Start()
     {
@@ -42,7 +42,7 @@ public class prandomspawn : MonoBehaviour
             //현재 생성된 몬스터 개수 산출
             int monsterCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-            if (monsterCount < maxMonster && timer < 60)
+            if (monsterCount < maxMonster && timer < monsterTime)
             {
                 //몬스터의 생성 주기 시간만큼 대기
                 yield return new WaitForSeconds(createTime);
