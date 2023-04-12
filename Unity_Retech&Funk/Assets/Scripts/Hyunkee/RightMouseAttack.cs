@@ -20,6 +20,7 @@ public class RightMouseAttack : MonoBehaviour
     public GameObject particles1;
     public GameObject particles2;
 
+    Boss_1 boss;
     private void Awake()
     {
         parrying = GameObject.Find("ParryPos").GetComponent<PlayerParry>();
@@ -33,6 +34,8 @@ public class RightMouseAttack : MonoBehaviour
         animator = GetComponent<Animator>();
         particles1.SetActive(false);
         particles2.SetActive(false);
+
+        boss = FindObjectOfType<Boss_1>();
     }
     private void Update()
     {
@@ -75,6 +78,10 @@ public class RightMouseAttack : MonoBehaviour
                         Destroy(collider.gameObject);           //Åº¸· ¼Ò¸ê
                         //isParryTrue();
                         parrying.parryTrue();
+                    }
+                    else if(collider.gameObject.tag == "Boss")
+                    {
+                        boss.bossHealth--;
                     }
                     else
                     {

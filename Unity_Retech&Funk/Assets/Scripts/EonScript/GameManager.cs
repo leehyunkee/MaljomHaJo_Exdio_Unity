@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         bossWarning.SetActive(false);
         theBoss.SetActive(true);
+        bossStart = true;
     }
 
     IEnumerator StartStageAnim()
@@ -51,7 +52,11 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        if ((int)GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && bossStart == false)
+        {
+            StartCoroutine(StartBoss());
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (escapeKey == false)
@@ -70,13 +75,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void LateUpdate()
-    {
-        if ((int)GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && bossStart == false)
-        {
-            StartCoroutine(StartBoss());
-        }
-    }
 
     public void End()
     {

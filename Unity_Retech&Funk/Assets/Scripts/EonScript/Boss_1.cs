@@ -9,10 +9,13 @@ public class Boss_1 : MonoBehaviour
     public GameObject sprinkleBullet;
     public GameObject gun;
     GameObject player;
+
     //public GameObject mob;
     float timeCheck;
     bool goRush = false;
     bool bossStart = true;
+
+    public int bossHealth = 10;
 
    
     Vector3 direction;
