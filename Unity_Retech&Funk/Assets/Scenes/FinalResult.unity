@@ -2593,7 +2593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &452602133
 Transform:
   m_ObjectHideFlags: 0
@@ -2602,7 +2602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452602132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.443613, y: 0.6249395, z: -2.9025753}
+  m_LocalPosition: {x: 57.2, y: 0.6249395, z: -2.9025753}
   m_LocalScale: {x: 6.7, y: 6.7, z: 1}
   m_Children:
   - {fileID: 1040782825}
@@ -3120,7 +3120,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8673139803936096229, guid: ccc8b7ef53c803b42a2b5bd93c89a42d, type: 3}
   sprinkleBullet: {fileID: 8673139803936096229, guid: ad1e4a7bfd949394cbeaef8c746ea483, type: 3}
   gun: {fileID: 525392490}
-  bossHealth: 10
+  mobs: {fileID: 452602132}
+  bossHealth: 5
+  phaseHealth: 0
 --- !u!212 &582451481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3180,7 +3182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582451479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 0.51, z: 0}
+  m_LocalPosition: {x: 12.3, y: 0.51, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 452602133}
@@ -8663,6 +8665,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   particles1: {fileID: 726221330}
   particles2: {fileID: 762908377}
+  boss: {fileID: 582451480}
 --- !u!114 &1553618111
 MonoBehaviour:
   m_ObjectHideFlags: 0

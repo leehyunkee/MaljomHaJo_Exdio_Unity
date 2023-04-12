@@ -8,7 +8,10 @@ public class Boss_1 : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject sprinkleBullet;
     public GameObject gun;
+    public GameObject mobs;
+
     GameObject player;
+    Animator gunFireAnim;
 
     //public GameObject mob;
     float timeCheck;
@@ -16,13 +19,24 @@ public class Boss_1 : MonoBehaviour
     bool bossStart = true;
 
     public int bossHealth = 10;
+    public int phaseHealth;
 
-   
     Vector3 direction;
     void Start()
     {
         StartCoroutine("MakeBullet");
         player = GameObject.FindWithTag("Player");
+        phaseHealth = bossHealth / 2;
+        gunFireAnim = gun.GetComponent<Animator>();
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag =="PlayerBullet")
+        {
+            bossHealth--;
+        }
     }
 
     // Update is called once per frame
@@ -30,10 +44,10 @@ public class Boss_1 : MonoBehaviour
     {
         if(bossStart)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(5.5f, 0, 0), 
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(2.53f, 0, 0), 
                 5 * Time.deltaTime);
 
-            if (transform.position.x <= 5.5f) 
+            if (transform.position.x <= 2.53f) 
                 bossStart = false;
         }
         if(Input.GetKeyDown(KeyCode.Z))
@@ -61,11 +75,14 @@ public class Boss_1 : MonoBehaviour
         }
     }
 
+   
     IEnumerator Sprinkle()
     {
-        yield return new WaitForSeconds(1f);
-        GameObject bullet = Instantiate(sprinkleBullet, transform.position, Quaternion.identity);
+        gunFireAnim.SetTrigger("Fire");
+        Vector3 sprinklePosition = new Vector3(gun.transform.position.x, gun.transform.position.y, 0);
+        GameObject bullet = Instantiate(sprinkleBullet, sprinklePosition, Quaternion.identity);
         bullet.transform.localScale = new Vector3(1, 1, 1);
+        yield return null;
         
     }
     IEnumerator MakeBullet()
@@ -91,11 +108,25 @@ public class Boss_1 : MonoBehaviour
             Debug.Log("1");
             yield return new WaitForSeconds(0.01f);
         }
-        transform.position = new Vector3(gun.transform.position.x, gun.transform.position.y, 0);
+        transform.position = new Vector3(12.3f, 0, 0);
         bossStart = true;
         yield return null;
 
         
+    }
+
+    public IEnumerator PhaseCheck()
+    {
+        Vector3 targetPosition = new Vector2(transform.position.x - 2f, mobs.transform.position.y);
+        if(bossHealth<=5)
+        {
+            mobs.SetActive(true);
+            while(mobs.transform.position !=targetPosition)
+            {
+                mobs.transform.position = Vector3.MoveTowards(mobs.transform.position, targetPosition, 1f * Time.deltaTime);
+                yield return null;
+            }
+        }
     }
    
 }
