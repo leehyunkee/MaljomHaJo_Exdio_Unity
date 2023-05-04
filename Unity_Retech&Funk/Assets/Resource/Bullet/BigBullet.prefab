@@ -95,5 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a11d77825425343bcbf27dd6309a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 0.01
+  bulletSpeed: 0.02
   circleBullet: {fileID: 7339572080272905350, guid: ebf92c001af5e34479c01ad368f8c7e8, type: 3}

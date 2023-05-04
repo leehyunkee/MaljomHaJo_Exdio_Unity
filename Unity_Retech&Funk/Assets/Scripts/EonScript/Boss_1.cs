@@ -21,6 +21,8 @@ public class Boss_1 : MonoBehaviour
     public int bossHealth = 10;
     public int phaseHealth;
 
+    public float minigunXPos = 2f;
+
     Vector3 direction;
     void Start()
     {
@@ -79,7 +81,7 @@ public class Boss_1 : MonoBehaviour
     IEnumerator Sprinkle()
     {
         gunFireAnim.SetTrigger("Fire");
-        Vector3 sprinklePosition = new Vector3(gun.transform.position.x, gun.transform.position.y, 0);
+        Vector3 sprinklePosition = new Vector3(gun.transform.position.x- minigunXPos, gun.transform.position.y, 0);
         GameObject bullet = Instantiate(sprinkleBullet, sprinklePosition, Quaternion.identity);
         bullet.transform.localScale = new Vector3(1, 1, 1);
         yield return null;
