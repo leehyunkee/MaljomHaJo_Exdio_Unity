@@ -6,6 +6,7 @@ public class BigBullet_ : Bullet
 {
 
     public GameObject circleBullet;
+    public float waitTime = 1f;
     protected override void Timer()
     {
         base.Timer();
@@ -16,7 +17,7 @@ public class BigBullet_ : Bullet
     IEnumerator ReadyCircle()
     {
         Debug.Log("hi");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(waitTime);
         for (int i = 0; i < 360; i += 13)
         {
             //ÃÑ¾Ë »ý¼º
